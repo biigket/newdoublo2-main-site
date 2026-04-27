@@ -1,0 +1,14 @@
+{
+  "trailingSlash": false,
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/blog", "destination": "https://blog.newdoublo2.com/blog", "permanent": true },
+    { "source": "/blog/:path*", "destination": "https://blog.newdoublo2.com/blog/:path*", "permanent": true },
+    { "source": "/compare", "destination": "https://blog.newdoublo2.com/compare/", "permanent": true },
+    { "source": "/compare/:path*", "destination": "https://blog.newdoublo2.com/compare/:path*", "permanent": true },
+    { "source": "/authentic-new-doublo-2", "destination": "https://blog.newdoublo2.com/authentic-new-doublo-2", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
