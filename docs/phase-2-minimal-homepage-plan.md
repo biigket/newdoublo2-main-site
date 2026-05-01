@@ -13,6 +13,14 @@ SEO-only changes, no visible layout change:
 - Risky SEO-head claims removed from metadata
 - Existing visible homepage markup/assets preserved
 
+## Phase 2 status
+
+Applied as copy-only minimal patch:
+- Replaced visible high-risk superiority/guarantee wording in the bundled homepage copy.
+- Kept the existing layout, navigation, assets, and visual system.
+- Updated the static no-JS fallback copy to match the safer 3-in-1 positioning.
+- Added verification so risky visible claims cannot return silently.
+
 ## Phase 2 principle
 
 Change as little as possible in this order:
