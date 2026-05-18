@@ -1,0 +1,6 @@
+import{c as m,j as e}from"./main-haQy3g7b.js";/**
+ * @license lucide-react v0.462.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const x=m("User",[["path",{d:"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2",key:"975kel"}],["circle",{cx:"12",cy:"7",r:"4",key:"17ys0d"}]]),f=[{id:"e4220bdf-7d27-4f0d-9ee1-3be21f842273",full_name:"OPTIMA",email:"info@optimaaesthetic.co.th",role:"admin",avatar_url:"",created_at:"2025-01-01T00:00:00Z"}];function d({ownerId:s,showName:l=!1,size:n="sm"}){const t=s?f.find(r=>r.id===s):null,a=n==="sm"?"h-6 w-6":"h-8 w-8",i=n==="sm"?"text-[10px]":"text-xs";if(!t)return e.jsx("span",{className:`inline-flex items-center justify-center rounded-full bg-[#1E3A5F] ${a}`,children:e.jsx(x,{className:"h-3 w-3 text-gray-400"})});const c=t.full_name.slice(0,2);return e.jsxs("span",{className:"inline-flex items-center gap-1.5",children:[e.jsx("span",{className:`inline-flex items-center justify-center rounded-full bg-[#0077B6]/20 text-[#00B4FF] font-medium ${a} ${i}`,title:t.full_name,children:c}),l&&e.jsx("span",{className:"text-xs text-gray-300 truncate max-w-[100px]",children:t.full_name})]})}export{d as O};
