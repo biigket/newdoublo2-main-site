@@ -3,10 +3,6 @@
   "trailingSlash": false,
   "cleanUrls": true,
   "redirects": [
-    { "source": "/admin", "destination": "https://optimaaesthetic.com/admin", "permanent": false },
-    { "source": "/admin/:path*", "destination": "https://optimaaesthetic.com/admin/:path*", "permanent": false },
-    { "source": "/ops", "destination": "https://optimaaesthetic.com/ops", "permanent": false },
-    { "source": "/ops/:path*", "destination": "https://optimaaesthetic.com/ops/:path*", "permanent": false },
     { "source": "/blog", "destination": "https://blog.newdoublo2.com/blog", "permanent": true },
     { "source": "/blog/:path*", "destination": "https://blog.newdoublo2.com/blog/:path*", "permanent": true },
     { "source": "/compare", "destination": "https://blog.newdoublo2.com/compare/", "permanent": true },
@@ -14,6 +10,10 @@
     { "source": "/authentic-new-doublo-2", "destination": "https://blog.newdoublo2.com/authentic-new-doublo-2", "permanent": true }
   ],
   "rewrites": [
+    { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/admin/:path*", "destination": "/admin.html" },
+    { "source": "/ops", "destination": "/admin.html" },
+    { "source": "/ops/:path*", "destination": "/admin.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

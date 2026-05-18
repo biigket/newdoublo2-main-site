@@ -1,0 +1,1 @@
+import{s as t}from"./main-CXvVt6CH.js";async function i(o,a){const{data:r,error:s}=await t.functions.invoke("ai-assist",{body:{action:o,payload:a}});if(s)throw new Error(s.message);if(r&&!r.success)throw new Error(r.error||"AI assist error");return r}export{i as c};
