@@ -63,9 +63,14 @@ for (const unchanged of [
   if (!html.includes(unchanged)) throw new Error(`Visible homepage markup changed or missing: ${unchanged}`);
 }
 
-for (const file of ['assets/index-Buf3chpX.js', 'assets/index-CSwyJKN2.css', 'vercel.json']) {
+for (const file of ['assets/index-Buf3chpX.js', 'assets/index-CSwyJKN2.css', 'vercel.json', 'robots.txt', 'sitemap.xml']) {
   if (!fs.existsSync(file)) throw new Error(`Missing ${file}`);
 }
+
+const robots = fs.readFileSync('robots.txt', 'utf8');
+if (!robots.includes('Sitemap: https://blog.newdoublo2.com/sitemap.xml')) throw new Error('robots.txt must point to the blog sitemap');
+const sitemap = fs.readFileSync('sitemap.xml', 'utf8');
+if (!sitemap.includes('<sitemapindex') || !sitemap.includes('https://blog.newdoublo2.com/sitemap.xml')) throw new Error('sitemap.xml must expose the blog sitemap');
 
 const assetRefs = new Set(js.match(/["']\/(?:assets|images)\/[^"']+["']/g)?.map((ref) => ref.slice(2, -1)) ?? []);
 const missingAssets = [...assetRefs].filter((file) => !fs.existsSync(file));
